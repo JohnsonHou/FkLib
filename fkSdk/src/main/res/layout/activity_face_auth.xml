@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <include layout="@layout/layout_header"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="440px"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="370px"
+            android:layout_height="250px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75px"
+            android:adjustViewBounds="true"
+            android:src="#dedede" />
+
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="220px"
+            android:layout_alignBottom="@+id/iv"
+            android:layout_alignLeft="@+id/iv"
+            android:layout_alignRight="@+id/iv"
+            android:layout_alignTop="@+id/iv"
+            android:paddingBottom="50px"
+            android:paddingTop="50px"
+            android:src="@mipmap/camera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="325px"
+            android:gravity="center"
+            android:text="上传图片"
+            android:textColor="#000000"
+            android:textSize="13sp" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_marginTop="20px"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:hint="请输入姓名"
+        android:inputType="text"
+        android:paddingLeft="70px"
+        android:textColor="#4C4947"
+        android:textColorHint="#CDC7C4"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:hint="请输入身份证"
+        android:inputType="text"
+        android:paddingLeft="70px"
+        android:textColor="#4C4947"
+        android:textColorHint="#CDC7C4"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:layout_marginBottom="90px"
+        android:layout_marginLeft="35px"
+        android:layout_marginRight="35px"
+        android:layout_marginTop="90px"
+        android:background="@drawable/corner5_green"
+        android:gravity="center"
+        android:text="开始识别"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+</com.zhy.autolayout.AutoLinearLayout>

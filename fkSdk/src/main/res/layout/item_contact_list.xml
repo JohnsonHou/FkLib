@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120px"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dcdcdc" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="480px"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="110px"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="480px"
+        android:layout_marginTop="1dp"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+</com.zhy.autolayout.AutoRelativeLayout>
