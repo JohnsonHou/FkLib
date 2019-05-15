@@ -311,8 +311,22 @@ public class SdkManager {
     private static final int REQUEST_COMPARE = 1001;
 
 
-    public void liveAuthen(Activity ctx) {
-        ctx.startActivityForResult(new Intent(ctx, FaceCompareActivity.class),REQUEST_AUTH);
+    public void liveAuthen(final Activity ctx) {
+        Acp.getInstance(ctx.getApplicationContext()).request(new AcpOptions.Builder()
+                        .setPermissions(Manifest.permission.READ_EXTERNAL_STORAGE,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                        .build(),
+                new AcpListener() {
+                    @Override
+                    public void onGranted() {
+                        ctx.startActivityForResult(new Intent(ctx, FaceCompareActivity.class),REQUEST_AUTH);
+                    }
+
+                    @Override
+                    public void onDenied(List<String> permissions) {
+                        Toast.makeText(ctx.getApplicationContext(), "权限拒绝", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     public static final int REQUEST_AUTH = 10807;
